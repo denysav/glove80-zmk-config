@@ -101,11 +101,20 @@
         sticky_layer_mo: sticky_layer_mo {
             compatible = "zmk,behavior-hold-tap";
             label = "STICKY_LAYER_MO";
-            bindings = <&none>, <&none>;
+            bindings = <&mo>, <&sl>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
+        };
+
+        sticky_key_kp: sticky_key_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_KEY_KP";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -159,12 +168,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1       &kp F2     &kp F3    &kp F4      &kp F5                                                                                                     &kp F6    &kp F7      &kp F8    &kp F9     &kp F10
-&kp EQUAL    &kp N1     &kp N2    &kp N3      &kp N4    &kp N5                                                                                   &kp N6  &kp N7    &kp N8      &kp N9    &kp N0     &kp MINUS
-&kp TAB      &kp Q      &kp W     &kp E       &kp R     &kp T                                                                                    &kp Y   &kp U     &kp I       &kp O     &kp P      &kp BSLH
-&kp ESC      &kp A      &kp S     &kp D       &kp F     &kp G                                                                                    &kp H   &kp J     &kp K       &kp L     &kp SEMI   &kp SQT
-&kp GRAVE    &kp Z      &kp X     &kp C       &kp V     &kp B   &kp LSHFT            &kp LCTRL  &layer_td  &kp LGUI  &kp RCTRL  &kp RSHIFT       &kp N   &kp M     &kp COMMA   &kp DOT   &kp FSLH   &kp PG_UP
-&magic 13 0  &sk LCTRL  &sk LALT  &sk LSHIFT  &sk LGUI          &thumb 12 BACKSPACE  &kp DEL    &kp LALT   &kp RALT  &kp RET    &space 11 SPACE          &sk RGUI  &sk RSHIFT  &sk RALT  &sk RCTRL  &kp PG_DN
+&kp F1       &kp F2                      &kp F3                    &kp F4                        &kp F5                                                                                                                     &kp F6                    &kp F7                        &kp F8                    &kp F9                      &kp F10
+&kp EQUAL    &kp N1                      &kp N2                    &kp N3                        &kp N4                    &kp N5                                                                                   &kp N6  &kp N7                    &kp N8                        &kp N9                    &kp N0                      &kp MINUS
+&kp TAB      &kp Q                       &kp W                     &kp E                         &kp R                     &kp T                                                                                    &kp Y   &kp U                     &kp I                         &kp O                     &kp P                       &kp BSLH
+&kp ESC      &kp A                       &kp S                     &kp D                         &kp F                     &kp G                                                                                    &kp H   &kp J                     &kp K                         &kp L                     &kp SEMI                    &kp SQT
+&kp GRAVE    &kp Z                       &kp X                     &kp C                         &kp V                     &kp B   &kp LSHFT            &kp LCTRL  &layer_td  &kp LGUI  &kp RCTRL  &kp RSHIFT       &kp N   &kp M                     &kp COMMA                     &kp DOT                   &kp FSLH                    &kp PG_UP
+&magic 13 0  &sticky_key_kp LCTRL LCTRL  &sticky_key_kp LALT LALT  &sticky_key_kp LSHIFT LSHIFT  &sticky_key_kp LGUI LGUI          &space 12 BACKSPACE  &kp DEL    &kp LALT   &kp RALT  &kp RET    &space 11 SPACE          &sticky_key_kp RGUI RGUI  &sticky_key_kp RSHIFT RSHIFT  &sticky_key_kp RALT RALT  &sticky_key_kp LCTRL LCTRL  &kp PG_DN
             >;
         };
 
