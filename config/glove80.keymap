@@ -149,7 +149,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        MacBase {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
             // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
@@ -297,6 +297,28 @@
 &trans       &kp RC(A)   &kp RC(S)   &kp RC(D)   &kp RC(F)   &kp RC(G)                                                     &kp RC(H)   &sk RGUI    &sk RSHIFT     &sk RALT     &kp RCTRL     &trans
 &trans       &kp RC(Z)   &kp RC(X)   &kp RC(C)   &kp RC(V)   &kp RC(B)   &kp F24  &none   &none   &none   &none   &kp F24  &kp RC(N)   &kp RC(M)   &kp RC(COMMA)  &kp RC(DOT)  &kp RC(FSLH)  &trans
 &trans       &trans      &trans      &trans      &trans                  &trans   &trans  &trans  &trans  &trans  &trans               &trans      &trans         &trans       &trans        &trans
+            >;
+        };
+
+        MacNavigation {
+            bindings = <
+&to 0  &none  &none         &none         &none                                                                               &none          &none       &none      &none      &none
+&none  &none  &none         &none         &none          &none                                                         &none  &none          &none       &none      &none      &none
+&none  &none  &kp LG(LEFT)  &kp UP_ARROW  &kp LG(RIGHT)  &kp PAGE_UP                                                   &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)  &none      &none
+&none  &none  &kp LEFT      &kp DOWN      &kp RIGHT      &kp PAGE_DOWN                                                 &none  &kp RALT       &kp RSHIFT  &kp RGUI   &kp RCTRL  &none
+&none  &none  &none         &none         &none          &none          &none  &none       &none  &none  &none  &none  &none  &none          &none       &none      &none      &none
+&none  &none  &none         &none         &none                         &none  &kp DELETE  &none  &none  &none  &none         &none          &none       &none      &none      &none
+            >;
+        };
+
+        MacSymbols {
+            bindings = <
+&none            &none                 &none                 &none                  &none                                                                                 &none               &none           &none               &none                 &none
+&kp GRAVE        &kp NON_US_BACKSLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA                                                    &none  &none               &none           &none               &none                 &none
+&kp EXCLAMATION  &kp LEFT_BRACE        &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION                                                 &none  &kp N7              &kp N8          &kp N9              &none                 &none
+&kp HASH         &hml LCTRL CARET      &hml LALT EQUAL       &hml LSHIFT UNDER      &hml LGUI DOLLAR  &kp STAR                                                     &none  &hmr RGUI NUMBER_4  &hmr RSHIFT N5  &hmr RALT NUMBER_6  &hmr RCTRL SEMICOLON  &kp BSPC
+&kp COLON        &kp LESS_THAN         &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp KP_SLASH  &none  &none  &none  &none  &none      &kp N0  &none  &kp N1              &kp N2          &kp NUMBER_3        &kp SLASH             &none
+&kp TILDE        &kp AMPERSAND         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS                        &none  &none  &none  &none  &kp ENTER  &none          &kp N0              &kp PLUS        &kp MINUS           &none                 &none
             >;
         };
     };
