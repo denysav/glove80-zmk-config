@@ -183,7 +183,7 @@
 &kp TAB               &kp Q                       &kp W                     &kp E                         &kp R                     &kp T                                                                                    &kp Y   &kp U                     &kp I                         &kp O                     &kp P                       &kp BSLH
 &kp ESC               &kp A                       &kp S                     &kp D                         &kp F                     &kp G                                                                                    &kp H   &kp J                     &kp K                         &kp L                     &kp SEMI                    &kp SQT
 &kp_sk LSHIFT LSHIFT  &kp Z                       &kp X                     &kp C                         &kp V                     &kp B   &kp INS              &kp LCTRL  &layer_td  &kp LGUI  &kp RCTRL  &kp ESCAPE       &kp N   &kp M                     &kp COMMA                     &kp DOT                   &kp FSLH                    &kp_sk RSHIFT RSHIFT
-&magic 12 0           &sticky_key_kp LCTRL LCTRL  &sticky_key_kp LALT LALT  &sticky_key_kp LSHIFT LSHIFT  &sticky_key_kp LGUI LGUI          &thumb 11 BACKSPACE  &kp DEL    &kp LALT   &kp RALT  &kp RET    &space 10 SPACE          &sticky_key_kp RGUI RGUI  &sticky_key_kp RSHIFT RSHIFT  &sticky_key_kp RALT RALT  &sticky_key_kp LCTRL LCTRL  &kp PG_DN
+&magic 22 0           &sticky_key_kp LCTRL LCTRL  &sticky_key_kp LALT LALT  &sticky_key_kp LSHIFT LSHIFT  &sticky_key_kp LGUI LGUI          &thumb 11 BACKSPACE  &kp DEL    &kp LALT   &kp RALT  &kp RET    &space 10 SPACE          &sticky_key_kp RGUI RGUI  &sticky_key_kp RSHIFT RSHIFT  &sticky_key_kp RALT RALT  &sticky_key_kp LCTRL LCTRL  &kp PG_DN
             >;
         };
 
@@ -308,14 +308,25 @@
             >;
         };
 
-        magic_layer {
+        WinBase {
             bindings = <
-&bt BT_CLR   &none            &none            &none            &none                                                                                     &none  &none  &none  &none  &bt BT_CLR_ALL
-&none        &none            &none            &none            &none            &none                                                             &none  &none  &none  &none  &none  &none
-&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
-&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 0
+&kp F1                &kp F2                    &kp F3                    &kp F4                        &kp F5                                                                                                                       &kp F6                      &kp F7                        &kp F8                    &kp F9                    &kp F10
+&kp EQUAL             &kp N1                    &kp N2                    &kp N3                        &kp N4                      &kp N5                                                                                   &kp N6  &kp N7                      &kp N8                        &kp N9                    &kp N0                    &kp MINUS
+&kp TAB               &kp Q                     &kp W                     &kp E                         &kp R                       &kp T                                                                                    &kp Y   &kp U                       &kp I                         &kp O                     &kp P                     &kp BSLH
+&kp ESC               &kp A                     &kp S                     &kp D                         &kp F                       &kp G                                                                                    &kp H   &kp J                       &kp K                         &kp L                     &kp SEMI                  &kp SQT
+&kp_sk LSHIFT LSHIFT  &kp Z                     &kp X                     &kp C                         &kp V                       &kp B   &kp INS              &kp LCTRL  &layer_td  &kp LGUI  &kp RCTRL  &kp ESCAPE       &kp N   &kp M                       &kp COMMA                     &kp DOT                   &kp FSLH                  &kp_sk RSHIFT RSHIFT
+&magic 22 0           &sticky_key_kp LGUI LGUI  &sticky_key_kp LALT LALT  &sticky_key_kp LSHIFT LSHIFT  &sticky_key_kp LCTRL LCTRL          &thumb 11 BACKSPACE  &kp DEL    &kp LALT   &kp RALT  &kp RET    &space 10 SPACE          &sticky_key_kp RCTRL RCTRL  &sticky_key_kp RSHIFT RSHIFT  &sticky_key_kp RALT RALT  &sticky_key_kp RGUI RGUI  &kp PG_DN
+            >;
+        };
+
+        WinMod {
+            bindings = <
+&none  &none   &none   &none   &none                                                               &none   &none   &none   &none   &none
+&none  &none   &none   &none   &none   &none                                                &none  &none   &none   &none   &none   &none
+&none  &none   &none   &none   &none   &none                                                &none  &none   &none   &none   &none   &none
+&none  &sl 17  &sl 16  &sl 15  &sl 14  &none                                                &none  &sl 18  &sl 19  &sl 20  &sl 21  &none
+&none  &none   &none   &none   &none   &none  &kp F24  &none  &none  &none  &none  &kp F24  &none  &none   &none   &none   &none   &none
+&none  &none   &none   &none   &none          &kp F24  &none  &none  &none  &none  &kp F24         &none   &none   &none   &none   &none
             >;
         };
 
@@ -352,7 +363,7 @@
             >;
         };
 
-        WinModL_WIN {
+        WinModL_LWIN {
             bindings = <
 &kp LG(F1)   &kp LG(F2)  &kp LG(F3)  &kp LG(F4)  &kp LG(F5)                                                                                                         &kp LG(F6)  &kp LG(F7)     &kp LG(F8)   &kp LG(F9)    &kp LG(F10)
 &none        &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)                                                                                 &kp LG(N6)  &kp LG(N7)  &kp LG(N8)     &kp LG(N9)   &kp LG(N0)    &none
@@ -404,6 +415,17 @@
 &none        &kp RG(A)   &kp RG(S)   &kp RG(D)   &kp RG(F)   &kp RG(G)                                                                                  &kp RG(H)   &sk RCTRL   &sk RSHIFT     &sk RALT     &kp RGUI      &none
 &none        &kp RG(Z)   &kp RG(X)   &kp RG(C)   &kp RG(V)   &kp RG(B)   &kp F24            &none           &none  &none  &none          &kp F24        &kp RG(N)   &kp RG(M)   &kp RG(COMMA)  &kp LG(DOT)  &kp RG(FSLH)  &none
 &none        &none       &none       &none       &none                   &kp RG(BACKSPACE)  &kp RG(DELETE)  &none  &none  &kp RG(ENTER)  &kp RG(SPACE)              &none       &none          &none        &none         &none
+            >;
+        };
+
+        magic_layer {
+            bindings = <
+&bt BT_CLR   &none            &none            &none            &none                                                                                     &none  &none  &none  &none  &bt BT_CLR_ALL
+&none        &none            &none            &none            &none            &none                                                             &none  &none  &none  &none  &none  &none
+&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
+&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
+&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 0
             >;
         };
     };
